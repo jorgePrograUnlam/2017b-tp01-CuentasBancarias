@@ -1,5 +1,7 @@
 package cuentasBancarias;
 
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class TestCuentaBancaria {
@@ -12,7 +14,7 @@ public class TestCuentaBancaria {
 
 		cuentaOrigen.transferirMontoHacia(0, cuentaDestino);
 
-		assertEquals(cuentaOrigin.getSaldo(), cuentaDestino.getSaldo());
+		assertEquals(cuentaOrigen.getSaldo(), cuentaDestino.getSaldo(),0.001);
 	}
 
 }
