@@ -16,7 +16,7 @@ public class CuentaBancaria {
 		if (monto > saldo)
 			throw new NoTieneSaldoException();
 
-		if (monto > 0 && this.saldo >= monto) {
+		if (monto > 0) {
 			this.saldo -= monto;
 			cuentaDestino.saldo += monto;
 		}
