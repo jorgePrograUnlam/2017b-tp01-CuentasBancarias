@@ -26,7 +26,7 @@ public class TestCuentaBancaria {
 
 		assertEquals(100, cuentaDestino.getSaldo(), 0.001);
 	}
-	
+
 	@Test
 	public void transferirDoscientos() {
 		CuentaBancaria cuentaOrigen = new CuentaBancaria(200);
@@ -36,7 +36,7 @@ public class TestCuentaBancaria {
 
 		assertEquals(200, cuentaDestino.getSaldo(), 0.001);
 	}
-	
+
 	@Test
 	public void transferirReduceSaldo() {
 		CuentaBancaria cuentaOrigen = new CuentaBancaria(500);
@@ -46,7 +46,7 @@ public class TestCuentaBancaria {
 
 		assertEquals(400, cuentaOrigen.getSaldo(), 0.001);
 	}
-	
+
 	@Test
 	public void montoNegativo() {
 		CuentaBancaria cuentaOrigen = new CuentaBancaria(500);
@@ -56,7 +56,14 @@ public class TestCuentaBancaria {
 
 		assertEquals(500, cuentaOrigen.getSaldo(), 0.001);
 	}
-	
 
+	@Test(expected = NoTieneSaldoException.class)
+	public void transferirSinSaldo() throws NoTieneSaldoException {
+		CuentaBancaria cuentaOrigen = new CuentaBancaria();
+		CuentaBancaria cuentaDestino = new CuentaBancaria();
+
+		cuentaOrigen.transferirMontoHacia(500, cuentaDestino);
+
+	}
 
 }
