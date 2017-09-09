@@ -8,4 +8,4 @@
 ## Estudiantes
 
 * Olivadese, Juan ([jolivadese](https://github.com/jolivadese))
-* XXX ([xxx](https://github.com/xxx))
+* Martinez Cruz, Jorge ([JorgePrograUnlam](https://github.com/jorgePrograUnlam))
