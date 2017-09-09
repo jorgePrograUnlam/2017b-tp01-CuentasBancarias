@@ -1,14 +1,18 @@
 package cuentasBancarias;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class TestCuentaBancaria {
 
 	@Test
-	public void test() {
-		fail();
+	public void transferirCero() {
+
+		CuentaBancaria cuentaOrigen = new CuentaBancaria();
+		CuentaBancaria cuentaDestino = new CuentaBancaria();
+
+		cuentaOrigen.transferirMontoHacia(0, cuentaDestino);
+
+		assertEquals(cuentaOrigin.getSaldo(), cuentaDestino.getSaldo());
 	}
 
 }
