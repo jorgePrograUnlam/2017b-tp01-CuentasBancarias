@@ -7,5 +7,5 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
+* Olivadese, Juan ([jolivadese](https://github.com/jolivadese))
 * XXX ([xxx](https://github.com/xxx))
