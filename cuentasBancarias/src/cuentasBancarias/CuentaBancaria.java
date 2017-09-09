@@ -12,8 +12,11 @@ public class CuentaBancaria {
 
 	}
 
-	public void transferirMontoHacia(double monto, CuentaBancaria cuentaDestino) {
-		if ( monto > 0 && this.saldo >= monto) {
+	public void transferirMontoHacia(double monto, CuentaBancaria cuentaDestino) throws NoTieneSaldoException {
+		if (monto > saldo)
+			throw new NoTieneSaldoException();
+
+		if (monto > 0 && this.saldo >= monto) {
 			this.saldo -= monto;
 			cuentaDestino.saldo += monto;
 		}

@@ -7,7 +7,7 @@ import org.junit.Test;
 public class TestCuentaBancaria {
 
 	@Test
-	public void transferirCero() {
+	public void transferirCero() throws NoTieneSaldoException {
 
 		CuentaBancaria cuentaOrigen = new CuentaBancaria();
 		CuentaBancaria cuentaDestino = new CuentaBancaria();
@@ -18,7 +18,7 @@ public class TestCuentaBancaria {
 	}
 
 	@Test
-	public void transferirCien() {
+	public void transferirCien() throws NoTieneSaldoException {
 		CuentaBancaria cuentaOrigen = new CuentaBancaria(100);
 		CuentaBancaria cuentaDestino = new CuentaBancaria(0);
 
@@ -28,7 +28,7 @@ public class TestCuentaBancaria {
 	}
 
 	@Test
-	public void transferirDoscientos() {
+	public void transferirDoscientos() throws NoTieneSaldoException {
 		CuentaBancaria cuentaOrigen = new CuentaBancaria(200);
 		CuentaBancaria cuentaDestino = new CuentaBancaria(0);
 
@@ -38,7 +38,7 @@ public class TestCuentaBancaria {
 	}
 
 	@Test
-	public void transferirReduceSaldo() {
+	public void transferirReduceSaldo() throws NoTieneSaldoException {
 		CuentaBancaria cuentaOrigen = new CuentaBancaria(500);
 		CuentaBancaria cuentaDestino = new CuentaBancaria(0);
 
@@ -48,7 +48,7 @@ public class TestCuentaBancaria {
 	}
 
 	@Test
-	public void montoNegativo() {
+	public void montoNegativo() throws NoTieneSaldoException {
 		CuentaBancaria cuentaOrigen = new CuentaBancaria(500);
 		CuentaBancaria cuentaDestino = new CuentaBancaria(0);
 
